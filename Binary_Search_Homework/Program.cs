@@ -12,21 +12,22 @@ namespace Binary_Search_Homework
         static void Main(string[] args) // feel free to edit the main method as you like
         {
             int[] arr1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-            int key = 10;
+            int key = 1;
 
-            // int idx = BinarySearchHomework.TernarySearch(arr1, key);
-            int idx = BinarySearchHomework.TernarySearch(arr1, key, 0, arr1.Length);
+             //int index = BinarySearchHomework.TernarySearch(arr1, key,0,arr1.Length-1);
+            //int idx = BinarySearchHomework.TernarySearch(arr1, key, 0, arr1.Length);
 
-            Console.WriteLine("Found {0} at index {1} using Ternary Search", key, idx);
+           // Console.WriteLine("Found {0} at index {1} using Ternary Search", key, index);
 
-            Console.WriteLine("=======================");
+           // Console.WriteLine("=======================");
 
             int[] arr2 = { 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 5, 6, 7, 7, 8, 9 };
-            int key2 = 5;
+            int key2 = 7;
 
-            int repeat_count = BinarySearchHomework.GetRepeatCount(arr2, key2);
+            
+             int repeat_count = BinarySearchHomework.GetRepeatCount(arr2, key2);
 
-            Console.WriteLine("the number 2 is repeated {0} times", repeat_count);
+              Console.WriteLine("the number 2 is repeated {0} times", repeat_count);
         }
     }
 }
