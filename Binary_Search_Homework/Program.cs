@@ -14,15 +14,15 @@ namespace Binary_Search_Homework
             int[] arr1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
             int key = 1;
 
-             //int index = BinarySearchHomework.TernarySearch(arr1, key,0,arr1.Length-1);
-            //int idx = BinarySearchHomework.TernarySearch(arr1, key, 0, arr1.Length);
+             int index = BinarySearchHomework.TernarySearch(arr1, key,0,arr1.Length-1);
+            int idx = BinarySearchHomework.TernarySearch(arr1, key, 0, arr1.Length);
 
-           // Console.WriteLine("Found {0} at index {1} using Ternary Search", key, index);
+            Console.WriteLine("Found {0} at index {1} using Ternary Search", key, index);
 
-           // Console.WriteLine("=======================");
+            Console.WriteLine("=======================");
 
             int[] arr2 = { 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 5, 6, 7, 7, 8, 9 };
-            int key2 = 7;
+            int key2 = 2;
 
             
              int repeat_count = BinarySearchHomework.GetRepeatCount(arr2, key2);

@@ -44,35 +44,31 @@ namespace Binary_Search_Homework // don't edit this line!!!
             if (is_first)
             {
                 int mid = (start + end) / 2;
-                if (arr[mid] == key && arr[mid - 1] < key)
+                if ((mid == 0 || arr[mid - 1] < key) && arr[mid] == key)
                     return mid;
 
-
-                if (start > end)
+                if (start >= end)
                     return -1;
 
                 if (arr[mid] < key)
                     return BinarySearchForCalculatingRepeated(arr, key, is_first, mid + 1, end);
 
-                return BinarySearchForCalculatingRepeated(arr, key, is_first, start, mid - 1);
+                return BinarySearchForCalculatingRepeated(arr, key, is_first, start, mid);
             }
-            if (!is_first)
+            else
             {
                 int mid = (start + end) / 2;
-                if (arr[mid] == key && arr[mid +1] > key)
+
+                if ((mid == arr.Length - 1 || arr[mid + 1] > key) && arr[mid] == key)
                     return mid;
 
-
-                if (start > end)
+                if (start >= end)
                     return -1;
 
-                if (arr[mid] < key)
+                if (arr[mid] <= key)
                     return BinarySearchForCalculatingRepeated(arr, key, is_first, mid + 1, end);
-
-                return BinarySearchForCalculatingRepeated(arr, key, is_first, start, mid - 1);
-
+                return BinarySearchForCalculatingRepeated(arr, key, is_first, start, mid);
             }
-            return 0;
 
         }
 
